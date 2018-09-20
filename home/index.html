@@ -1,6 +1,6 @@
 <!--HTML wire frames for Harvard IIIF 2.0 - home page-->
 <!--Dynamic menu from Code Pen https://codepen.io/rishabhp/pen/aNXVbQ-->
-<!--There are 11 UI comments in this commit-->
+<!--There are 9 accessibility-related UI comments in this commit-->
 
 
 
@@ -166,6 +166,11 @@
           opacity: .65;
         }
 
+        .accessTextDecor { /* Accessibility - Increasing the color contrast of the Bootstrap text decoration color */
+        color: #265A87;
+        }
+
+
     </style>
 
         <script src=”https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -287,7 +292,9 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3 col-md-offset-1">
-                        <img src="http://iiif.harvard.edu/wp-content/uploads/2016/02/International_Image_Interoperability_Framework_logo.png">
+
+<!--UI comment #8a - Accessibility - adding ALT tag with image description-->
+                        <img src="http://iiif.harvard.edu/wp-content/uploads/2016/02/International_Image_Interoperability_Framework_logo.png" alt="IIIF logo">
                     </div>
                     <div class="col-md-7">
                         <p class="text-left font_IIIF">
@@ -295,14 +302,16 @@
                             centralized resource for documentation, development, and use case scenarios regarding the display and
                             sharing of cultural heritage materials stored within the various Harvard University collections.
                             Partners include the
-                              <a href="http://library.harvard.edu" target="_blank">Harvard Library</a>,&nbsp;the
-                              <a href="http://www.harvardartmuseums.org" target="_blank">Harvard Art Museums</a>,
-                              <a href="http://harvardx.harvard.edu" target="_blank">HarvardX</a>,
-                              <a href="http://huit.harvard.edu/" target="_blank">Harvard University Information Technology</a>
-                              (<a href="http://www.darthcrimson.org" target="_blank">Arts &amp; Humanities Research Computing</a>,
+
+<!--UI comment #8b - Accessibility - adding a new class for accessible color contrast of hyperlinks -->
+                            <a href="http://library.harvard.edu" target="_blank" class="accessTextDecor">Harvard Library</a>,&nbsp;the
+                              <a href="http://www.harvardartmuseums.org" target="_blank" class="accessTextDecor">Harvard Art Museums</a>,
+                              <a href="http://harvardx.harvard.edu" target="_blank" class="accessTextDecor">HarvardX</a>,
+                              <a href="http://huit.harvard.edu/" target="_blank" class="accessTextDecor">Harvard University Information Technology</a>
+                              (<a href="http://www.darthcrimson.org" target="_blank" class="accessTextDecor">Arts &amp; Humanities Research Computing</a>,
                               the
-                              <a href="http://atg.fas.harvard.edu/" target="_blank">FAS Academic Technology Group</a>,
-                              <a href="http://huit.harvard.edu/services/library-technology-services" target="_blank">Library
+                              <a href="http://atg.fas.harvard.edu/" target="_blank" class="accessTextDecor">FAS Academic Technology Group</a>,
+                              <a href="http://huit.harvard.edu/services/library-technology-services" target="_blank" class="accessTextDecor">Library
                                   Technology Services</a>), and various academic departments.
                         </p>
                     </div>
@@ -333,7 +342,9 @@
                       </p>
                   </div>
                   <div class="col-md-2">
-                    <img src="http://iiif.harvard.edu/wp-content/uploads/2016/01/chronique.png" style="width: 10em;">
+
+<!--UI comment #8c - Accessibility - adding ALT tag with image description-->
+                    <img src="http://iiif.harvard.edu/wp-content/uploads/2016/01/chronique.png" style="width: 10em;" alt="Image of an old illustration">
                   </div>
                 </div>
               </section><!--/ IIIF-->
@@ -348,20 +359,24 @@
                 </div>
                 <div class="row">
                   <div class="col-md-3 col-md-offset-1">
-                    <img src="http://showcase.iiif.io/img/showcase/mirador.jpg" style="width: 10em;" class="pull-left">
+
+<!--UI comment #8d - Accessibility - adding ALT tag with image description-->
+                    <img src="http://showcase.iiif.io/img/showcase/mirador.jpg" style="width: 10em;" class="pull-left" alt="Screen capture of the Mirador interface">
                   </div>
                   <div class="col-md-8">
                       <p class="text-left font_IIIF">
                           <strong>Mirador</strong> is a configurable, extensible, and easy-to-integrate image viewer, which
                           enables image annotation and comparison of images from repositories dispersed around the world.
                           Mirador has been optimized to display resources from repositories that support the
-                          <a href="http://iiif.io/">International Image Interoperability Framework</a> (IIIF) APIs. It
+
+<!--UI comment #8e - Accessibility - adding a new class for accessible color contrast of hyperlinks -->
+                          <a href="http://iiif.io/" class="accessTextDecor">International Image Interoperability Framework</a> (IIIF) APIs. It
                           provides a tiling windowed environment for comparing multiple image-based resources, synchronized
                           structural and visual navigation of content using
-                          <a href="https://openseadragon.github.io/">OpenSeadragon</a>,
-                          <a href="http://www.openannotation.org/">Open Annotation</a> compliant annotation creation and viewing
+                          <a href="https://openseadragon.github.io/" class="accessTextDecor">OpenSeadragon</a>,
+                          <a href="http://www.openannotation.org/" class="accessTextDecor">Open Annotation</a> compliant annotation creation and viewing
                           on deep-zoomable canvases, metadata display, book reading, bookmarking and more.
-                          <a href="http://iiif.github.io/mirador/">Additional information available at the official Mirador site</a>.
+                          <a href="http://iiif.github.io/mirador/" class="accessTextDecor">Additional information available at the official Mirador site</a>.
                       </p>
                   </div>
                 </div>
@@ -388,7 +403,7 @@
                     </div>
                     <div class="col-md-3" style="height: 22em;">
 
-<!-- UI comment # 9 - clipping the image within a diamond shape -->
+<!-- UI comment #9 - clipping the image within a diamond shape -->
                       <style>
                           .imagecontainer{
                              margin:50px auto;
@@ -431,7 +446,9 @@
                       </style><!--/ Clipping the image within a diamond shape -->
 
                         <div class="imagecontainer">
-                            <img alt="" src="http://104.236.212.13/wp-content/uploads/2016/03/48309546.jpg" />
+
+<!--UI comment #9a - Accessibility - adding ALT tag with image description-->
+                            <img alt="" src="http://104.236.212.13/wp-content/uploads/2016/03/48309546.jpg" alt="Image of an old print"/>
                         </div>
                     </div>
                 </div>
@@ -478,7 +495,9 @@
               </button>
               <a href="http://iiif.harvard.edu" class="navbar-brand" style="margin-top: -.25em; white-space: nowrap;">
                   <span>
-                      <img id="logoImage" src="http://iiif.harvard.edu/wp-content/uploads/2016/02/International_Image_Interoperability_Framework_logo.png" alt="" title="" style="width: 1.75em;">
+
+<!--UI comment #9b - Accessibility - adding ALT tag with image description-->
+                      <img id="logoImage" src="http://iiif.harvard.edu/wp-content/uploads/2016/02/International_Image_Interoperability_Framework_logo.png" alt="IIIF logo" title="" style="width: 1.75em;">
                   </span>
                     <span class="font_IIIF">
                         @Harvard
@@ -501,7 +520,9 @@
         <div id="footer" class="footer" style="padding: 1em;"><!-- footer -->
             <div class="row">
                 <div class="col-md-2">
-                    <img src="http://www.sciencephilanthropyalliance.org/wp-content/uploads/2016/01/harvard-logo.png" style="width: 6em; margin-right: 2em;">
+
+<!--UI comment #9c - Accessibility - adding ALT tag with image description-->
+                    <img src="http://www.sciencephilanthropyalliance.org/wp-content/uploads/2016/01/harvard-logo.png" style="width: 6em; margin-right: 2em;" alt="Harvard logo">
                 </div>
                 <div class="col-md-5 footer_font_IIIF">
                      © International Image Interoperability Framework at Harvard University
