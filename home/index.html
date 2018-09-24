@@ -1,6 +1,6 @@
 <!--HTML wire frames for Harvard IIIF 2.0 - home page-->
 <!--Dynamic menu from Code Pen https://codepen.io/rishabhp/pen/aNXVbQ-->
-<!--There are 9 accessibility-related UI comments in this commit-->
+<!--There are 5 responsiveness-related UI comments in this commit-->
 
 
 
@@ -82,9 +82,9 @@
             letter-spacing: 5px;
         }
 
-        .carousel-caption {
+        .carousel-caption { /* Responsiveness - Removing the margins for  */
         padding-bottom: 30px;
-        margin-right: -10%;
+        color: black;
         }
 
       </style>
@@ -111,10 +111,9 @@
 
         /* colorBkgd */
 
-        .colorBkgd {
+        .colorBkgd { /* Responsiveness - Removing the fixed height */
           width: 100%;
           padding: 4em;
-          height: 26em;
         }
 
         /* colors */
@@ -214,8 +213,9 @@
 <!--UI comment #3 - since opacity cannot be applied to div background images, adding a white div with opacity -->
                                     <div style="width: 100%; height: 400px; display: block; position: relative; background-color: white; opacity: .5;"></div>
 
-<!--UI comment #4 - changing the font color of the Bootstrap carousel -->
-                                    <div class="carousel-caption " style="color: black; margin-left: -8em;">
+<!--UI comment #4 - changing the font color of the Bootstrap carousel-->
+<!--UI comment #4a - Responsiveness - moving this style to the class carousel-caption. Removing the margin. -->
+                                    <div class="carousel-caption">
                                     <h3>
                                         Splash image conveying the unique aspects of Harvard IIIF and with a focus on the three primary users
                                     </h3>
@@ -236,7 +236,8 @@
                             <div style="width: 100%; height: 400px; display: block; position: relative; background-color: white; opacity: .75;"></div>
 
 <!--UI comment #6 - changing the font color of the Bootstrap carousel -->
-                            <div class="carousel-caption" style="color: black; margin-left: -8em;">
+<!--UI comment #4a - Responsiveness - moving this style to the class carousel-caption. Removing the margin. -->
+                                    <div class="carousel-caption">
                                 <h3>
                                     Splash image conveying the unique aspects of Harvard IIIF and with a focus on the three primary users
                                 </h3>
@@ -257,7 +258,8 @@
                         <div style="width: 100%; height: 400px; display: block; position: relative; background-color: white; opacity: .75;"></div>
 
 <!--UI comment #8 - changing the font color of the Bootstrap carousel -->
-                        <div class="carousel-caption" style="color: black; margin-left: -8em;">
+<!--UI comment #4a - Responsiveness - moving this style to the class carousel-caption. Removing the margin. -->
+                                    <div class="carousel-caption">
                             <h3>
                                 Splash image conveying the unique aspects of Harvard IIIF and with a focus on the three primary users
                             </h3>
@@ -573,7 +575,7 @@
 
 <!--UI comment #11 - script for underlining navbar items upon scroll-->
     <script>
-              var sections = $('section'),
+        var sections = $('section'),
         nav = $('nav'),
         nav_height = nav.outerHeight();
 
