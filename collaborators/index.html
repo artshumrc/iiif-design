@@ -1,6 +1,6 @@
 <!--HTML wire frames for Harvard IIIF 2.0 - home page-->
 <!--Dynamic menu from Code Pen https://codepen.io/rishabhp/pen/aNXVbQ-->
-<!--There are 3 accessibility-related UI comments in this commit-->
+<!--There are 3 new UI comments in this commit-->
 
 
 
@@ -31,6 +31,10 @@
 
         <!-- Style from the current IIIF website -->
       <link rel="http://iiif.harvard.edu/wp-content/themes/xavier/style.css">
+
+<!--UI comment #1a - Adding Font Awesome-->
+        <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -129,6 +133,15 @@
             text-align: center;
         }
 
+        .h2-card_font_IIIF {
+            font-size: .7em;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            line-height: 1.5em;
+            -webkit-font-smoothing: antialiased;
+            text-align: center;
+        }
+
         .footer_font_IIIF {
           font-size: 1.25rem;
             font-family: 'Open Sans', sans-serif;
@@ -141,52 +154,63 @@
           opacity: .65;
         }
 
-        .accessTextDecor { /* Accessibility - Increasing the color contrast of the Bootstrap text decoration color */
-        color: #265A87;
-        }
-
     </style>
 
         <style>
-          .imagecontainer{
-             margin:50px auto;
-             display:block;
-             width:160px;
-             height:160px;
-             overflow:hidden;
-             border-radius: 10px;
-             transform: rotate(45deg);
-             -ms-transform: rotate(45deg); /* IE 9 */
-             -webkit-transform: rotate(45deg); /* Safari and Chrome */
-             position:relative;
-             margin-right: 3em;
-
-             /* non-essential styling */
-             -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
-             box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
-
-            }
-            .imagecontainer img{
-             transform: rotate(-45deg);
-             -ms-transform: rotate(-45deg); /* IE 9 */
-             -webkit-transform: rotate(-45deg); /* Safari and Chrome */
-             position:absolute;
-             top:-30px;
-             left:-30px;
-            }
-            figcaption{
-             transform: rotate(45deg);
-             -ms-transform: rotate(45deg); /* IE 9 */
-             -webkit-transform: rotate(45deg);
-
-             /* non-essential styling */
-             margin:-80px 0 0 -160px;
-             font-family:'Oswald', Arial, Sans;
-             font-size:20px;
-             text-transform:uppercase;
-             letter-spacing:.05em;
-            }
-      </style><!--/ Clipping the image within a diamond shape -->
+          #card-img {
+            background-position: 0 0px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 7em;
+        }
+        .card-icon {
+            color: #337ab7;
+            font-size: 1em;
+            margin-top: -1.5em;
+            text-align: center;
+        }
+        .card-icon_museum {
+            color: #4E84C4;
+            font-size: 1em;
+            margin-top: -1.5em;
+            text-align: center;
+        }
+        .card-icon_course {
+            color: #52854C;
+            font-size: 1em;
+            margin-top: -1.5em;
+            text-align: center;
+        }
+        .card-icon_application {
+            color: #C4961A;
+            font-size: 1em;
+            margin-top: -1.5em;
+            text-align: center;
+        }
+        .card-icon_books {
+            color: #D16103;
+            font-size: 1em;
+            margin-top: -1.5em;
+            text-align: center;
+        }
+        .card-icon_research {
+            color: #8C8179;
+            font-size: 1em;
+            margin-top: -1.5em;
+            text-align: center;
+        }
+        .row.display-flex {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .thumbnail {
+          height: 100%;
+        }
+        .col-margin-top {
+            margin-top: 1em;
+        }
+      </style>
 
         <script src=”https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src=”scripts.js”></script>
@@ -199,82 +223,143 @@
 <!--UI comment #1 - adding top margin because of the fixed navbar-->
         <div style="margin-top: 4em;">
 
-            <div class="col-md-3" style="height: 16em;">
+            <div class="row display-flex">
+                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
 
-<!-- UI comment #2 - clipping images within a diamond shape -->
-
-                <div class="imagecontainer">
-
-<!--UI comment #2a - Accessibility - adding ALT tag with image description-->
-                    <img alt="" src="http://iiif.harvard.edu/wp-content/uploads/2017/03/banner.jpg" style="width: 10em;" alt="Image of an old print">
+<!-- UI comment #2a - clipping image as a div background -->
+<!-- UI comment #2b - adding icons -->
+                    <div class="thumbnail">
+                        <div id="card-img" style="background-image: url(http://iiif.harvard.edu/wp-content/uploads/2017/03/banner.jpg);"></div>
+                        <div class="card-icon_museum">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-university fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="caption">
+                            <h2 class="h2-card_font_IIIF">
+                                <a href="http://iiif.harvard.edu/portfolio/beyond-words-illuminated-manuscripts-in-boston-collections/">
+                                    Beyond Words: Illuminated Manuscripts in Boston Collections
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
                 </div>
-                <h2 class="h2-font_IIIF">
 
-<!--UI comment #2b - Accessibility - adding a new class for accessible color contrast of hyperlinks -->
-                    <a href="http://iiif.harvard.edu/portfolio/beyond-words-illuminated-manuscripts-in-boston-collections/" class="accessTextDecor">
-                        Beyond Words: Illuminated Manuscripts in Boston Collections
-                    </a>
-                </h2>
-            </div>
-
-            <div class="col-md-3" style="height: 16em;">
-
-                <div class="imagecontainer">
-                    <img alt="" src="http://iiif.harvard.edu/wp-content/uploads/2017/03/banner.jpg" style="width: 10em;">
+                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
+                    <div class="thumbnail">
+                        <div id="card-img" style="background-image: url(http://iiif.harvard.edu/wp-content/uploads/2016/01/utagawa.jpg);"></div>
+                        <div class="card-icon_course">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="caption">
+                            <h2 class="h2-card_font_IIIF">
+                                <a href="http://iiif.harvard.edu/portfolio/harvardx.html">
+                                    HarvardX
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
                 </div>
-                <h2 class="h2-font_IIIF">
-                    <a href="http://iiif.harvard.edu/portfolio/beyond-words-illuminated-manuscripts-in-boston-collections/" class="accessTextDecor">
-                        Beyond Words: Illuminated Manuscripts in Boston Collections
-                    </a>
-                </h2>
-            </div>
 
-            <div class="col-md-3" style="height: 16em;">
-
-                <div class="imagecontainer">
-                    <img alt="" src="http://iiif.harvard.edu/wp-content/uploads/2017/03/banner.jpg" style="width: 10em;">
+                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
+                    <div class="thumbnail">
+                        <div id="card-img" style="background-image: url(http://104.236.212.13/wp-content/uploads/2016/01/atgi.png);"></div>
+                        <div class="card-icon_application">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="caption">
+                            <h2 class="h2-card_font_IIIF">
+                                <a href="http://iiif.harvard.edu/portfolio/atg/">
+                                    FAS Academic Technology Group
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
                 </div>
-                <h2 class="h2-font_IIIF">
-                    <a href="http://iiif.harvard.edu/portfolio/beyond-words-illuminated-manuscripts-in-boston-collections/" class="accessTextDecor">
-                        Beyond Words: Illuminated Manuscripts in Boston Collections
-                    </a>
-                </h2>
-            </div>
 
-            <div class="col-md-3" style="height: 16em;">
-
-                <div class="imagecontainer">
-                    <img alt="" src="http://iiif.harvard.edu/wp-content/uploads/2017/03/banner.jpg" style="width: 10em;">
+                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
+                    <div class="thumbnail">
+                        <div id="card-img" style="background-image: url(http://104.236.212.13/wp-content/uploads/2016/01/download.png);"></div>
+                        <div class="card-icon_books">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="caption">
+                            <h2 class="h2-card_font_IIIF">
+                                <a href="http://iiif.harvard.edu/portfolio/jeffrey-hamburger/">
+                                    Jeffrey Hamburger, Kuno Francke Professor of German Art & Culture
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
                 </div>
-                <h2 class="h2-font_IIIF">
-                    <a href="http://iiif.harvard.edu/portfolio/beyond-words-illuminated-manuscripts-in-boston-collections/" class="accessTextDecor">
-                        Beyond Words: Illuminated Manuscripts in Boston Collections
-                    </a>
-                </h2>
-            </div>
 
-            <div class="col-md-3" style="height: 16em;">
-
-                <div class="imagecontainer">
-                    <img alt="" src="http://iiif.harvard.edu/wp-content/uploads/2017/03/banner.jpg" style="width: 10em;">
+                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
+                    <div class="thumbnail">
+                        <div id="card-img" style="background-image: url(http://104.236.212.13/wp-content/uploads/2016/01/vangogh-1.jpg);"></div>
+                        <div class="card-icon_museum">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-university fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="caption">
+                            <h2 class="h2-card_font_IIIF">
+                                <a href="http://iiif.harvard.edu/portfolio/harvard-art-museums/">
+                                    Harvard Art Museums
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
                 </div>
-                <h2 class="h2-font_IIIF">
-                    <a href="http://iiif.harvard.edu/portfolio/beyond-words-illuminated-manuscripts-in-boston-collections/" class="accessTextDecor">
-                        Beyond Words: Illuminated Manuscripts in Boston Collections
-                    </a>
-                </h2>
-            </div>
 
-            <div class="col-md-3" style="height: 16em;">
-
-                <div class="imagecontainer">
-                    <img alt="" src="http://iiif.harvard.edu/wp-content/uploads/2017/03/banner.jpg" style="width: 10em;">
+                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
+                    <div class="thumbnail">
+                        <div id="card-img" style="background-image: url(http://104.236.212.13/wp-content/uploads/2016/01/tarot.jpg);"></div>
+                        <div class="card-icon_research">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-search fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="caption">
+                            <h2 class="h2-card_font_IIIF">
+                                <a href="http://iiif.harvard.edu/portfolio/artshumrc/">
+                                    Arts & Humanities Research Computing
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
                 </div>
-                <h2 class="h2-font_IIIF">
-                    <a href="http://iiif.harvard.edu/portfolio/beyond-words-illuminated-manuscripts-in-boston-collections/" class="accessTextDecor">
-                        Beyond Words: Illuminated Manuscripts in Boston Collections
-                    </a>
-                </h2>
+
+                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
+                    <div class="thumbnail">
+                        <div id="card-img" style="background-image: url(http://104.236.212.13/wp-content/uploads/2016/03/48309546.jpg);"></div>
+                        <div class="card-icon_books">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="caption">
+                            <h2 class="h2-card_font_IIIF">
+                                <a href="http://iiif.harvard.edu/portfolio/harvard-library/">
+                                    Harvard Library
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
 <!--UI comment #3 - bottom space to compensate for sticky footer-->
