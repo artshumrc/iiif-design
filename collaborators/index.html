@@ -1,6 +1,6 @@
-<!--HTML wire frames for Harvard IIIF 2.0 - home page-->
+<!--HTML wire frames for Harvard IIIF 2.0 - Collaborators landing page, grid view -->
 <!--Dynamic menu from Code Pen https://codepen.io/rishabhp/pen/aNXVbQ-->
-<!--There are 3 new UI comments in this commit-->
+<!--There is 1 new UI comment in this commit-->
 
 
 
@@ -389,6 +389,26 @@
                 </a>
             </div>
 
+        <nav class="navbar navbar-default navbar-fixed-top" style="opacity: .75; box-shadow: inset 0 0px 0 ;"><!-- navbar -->
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                      data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="http://iiif.harvard.edu" class="navbar-brand" style="margin-top: -.25em; white-space: nowrap;">
+                  <span>
+                      <img id="logoImage" src="http://iiif.harvard.edu/wp-content/uploads/2016/02/International_Image_Interoperability_Framework_logo.png" alt="" title="" style="width: 1.75em;">
+                  </span>
+                    <span class="font_IIIF">
+                        @Harvard
+                    </span>
+                </a>
+            </div>
+
 <!--UI comment #4 - replaced the home page anchor links with regular links-->
             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
               <ul class="nav navbar-nav navbar-right navbar-font_IIIF">
@@ -402,6 +422,22 @@
             </div>
           </div>
         </nav><!-- / navbar -->
+
+<!--UI comment #4a - adding a sticky grid/list view toggle -->
+
+        <nav class="navbar navbar-default navbar-fixed-top" style="opacity: .75; box-shadow: inset 0 0px 0 ; margin-top: 2.5em; margin-right: .5em;">
+          <div class="container-fluid">
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+              <ul class="nav navbar-nav navbar-right navbar-font_IIIF">
+                <li>
+                    <a href="#" class="">
+                        <i class="fa fa-list fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav><!-- / sticky grid/list view toggle -->
 
         <div id="footer" class="footer navbar-fixed-bottom" style="padding: 1em;"><!-- footer -->
             <div class="row">
