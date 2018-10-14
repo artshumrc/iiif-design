@@ -1,7 +1,7 @@
 <!--HTML wire frames for Harvard IIIF 2.0 - home page-->
 <!--Dynamic menu from Code Pen https://codepen.io/rishabhp/pen/aNXVbQ-->
 <!--There are 5 responsiveness-related UI comments in this commit-->
-
+<!--There are 7(e) new UI comments in this commit-->
 
 
 
@@ -22,87 +22,91 @@
         <title itemprop="name">Harvard University IIIF</title>
         <meta name="description" content="Harvard University is devoted to excellence in teaching, learning, and research, and to developing leaders in many disciplines who make a difference global IIIF adoption at Harvard is a collaborative effort that began in earnest in 2014.  HarvardX, Harvard Art Museums, Harvard University Information Technology, Harvard Library, and various faculty have contributed in some way to increasing the visibility and use of IIIF at Harvard. The IIIF/Mirador Working Group guides and coordinates IIIF/Mirador-related efforts across the University.  As such, no one group “owns” IIIF at Harvard. The IIIF at Harvard website aims to highlight the collaborations and projects at Harvard that have utilized IIIF or Mirador in some capacity.">
 
-      <!-- Bootstrap -->
-      <!-- Latest compiled and minified CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-      <!-- Optional theme -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
+          <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+          <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+          <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
 
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-      <style>
-          @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-
-        body {
-          font-family: 'Playfair Display', serif;
-          font-size: 2.2rem;
-        }
-
-        /* Navigation */
-
-        nav ul li a:hover {
-          color: blue;
-        }
-        a.active {
-          font-weight: 900;
-          font-size: 1.25em;
-          border-bottom: 2px solid red;
-        }
-
-        /* Headings */
-
-        h1 {
-          font-size: 5rem;
-          color: #34495E;
-        }
-
-        h2 {
-            color: #000;
-            font-size: 2em;
-            font-family: 'Open Sans', serif;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-        }
-
-        .carousel-caption { /* Responsiveness - Removing the margins for  */
-        padding-bottom: 30px;
-        color: black;
-        }
-
-      </style>
-
-      <script>
-      window.console = window.console || function(t) {};
-
-      </script>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-      <script>
-      if (document.location.search.match(/type=embed/gi)) {
-        window.parent.postMessage("resize", "*");
-      }
+          <style>
+              @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-      </script>
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
 
-       <style>/* Setting fade transition and default settings */
+/* UI comment #1e - merging the body classes here */
+            body {
+              font-family: 'Open Sans', sans-serif;
+              font-size: 1.8em;
+              font-weight: 400;
+              line-height: 2em;
+              -webkit-font-smoothing: antialiased;
+            }
+
+            /* Navigation */
+
+            nav ul li a:hover {
+              color: blue;
+            }
+            a.active {
+              font-weight: 900;
+              font-size: 1.25em;
+              border-bottom: 2px solid red;
+            }
+
+            /* Headings */
+
+            h1 {
+              font-size: 5rem;
+              color: #34495E;
+            }
+
+            h2 {
+                color: #000;
+                font-size: 2em;
+                font-family: 'Open Sans', serif;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+
+            .carousel-caption { /* Responsiveness - Removing the margins for  */
+            padding-bottom: 30px;
+            color: black;
+            }
+
+          </style>
+
+          <script>
+          window.console = window.console || function(t) {};
+
+          </script>
+
+
+          <script>
+          if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+          }
+
+          </script>
+
+        <style>/* Setting fade transition and default settings */
         body {
           color: #000;
           background-color: #f4f4f4;
@@ -143,14 +147,6 @@
             font-weight: 400;
             -webkit-font-smoothing: antialiased;
             padding-bottom: 10px;
-        }
-
-        .font_IIIF {
-            font-size: .8em;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 400;
-            -webkit-font-smoothing: antialiased;
-            line-height: 2em;
         }
 
         .footer_font_IIIF {
@@ -299,7 +295,9 @@
                         <img src="http://iiif.harvard.edu/wp-content/uploads/2016/02/International_Image_Interoperability_Framework_logo.png" alt="IIIF logo">
                     </div>
                     <div class="col-md-7">
-                        <p class="text-left font_IIIF">
+
+<!--UI comment #2e - removing class font_IIIF-->
+                        <p class="text-left">
                             The International Image Interoperability Framework (IIIF) at Harvard University website is a
                             centralized resource for documentation, development, and use case scenarios regarding the display and
                             sharing of cultural heritage materials stored within the various Harvard University collections.
@@ -330,7 +328,9 @@
                 </div>
                 <div class="row">
                   <div class="col-md-8 col-md-offset-1">
-                      <p class="text-left font_IIIF">
+
+<!--UI comment #3e - removing class font_IIIF-->
+                      <p class="text-left">
                           The
                           <strong>International Image Interoperability Framework (IIIF)</strong>
                           defines universal standards for describing and delivering images over the web,
@@ -366,7 +366,9 @@
                     <img src="http://showcase.iiif.io/img/showcase/mirador.jpg" style="width: 10em;" class="pull-left" alt="Screen capture of the Mirador interface">
                   </div>
                   <div class="col-md-8">
-                      <p class="text-left font_IIIF">
+
+<!--UI comment #4e - removing class font_IIIF-->
+                      <p class="text-left">
                           <strong>Mirador</strong> is a configurable, extensible, and easy-to-integrate image viewer, which
                           enables image annotation and comparison of images from repositories dispersed around the world.
                           Mirador has been optimized to display resources from repositories that support the
@@ -394,7 +396,9 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8 col-md-offset-1">
-                        <p class="text-left font_IIIF">
+
+<!--UI comment #5e - removing class font_IIIF-->
+                        <p class="text-left">
                           <strong>Collaborators</strong>
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                           dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -469,7 +473,9 @@
                     <img src="http://iiif.harvard.edu/wp-content/uploads/2016/01/MediaManagerCanvas.png" style="width: 14em;">
                   </div>
                   <div class="col-md-6">
-                      <p class="text-left font_IIIF">
+
+<!--UI comment #6e - removing class font_IIIF-->
+                      <p class="text-left">
                           (Resources page, sort of a “getting started” page. Central location for advice and guidance.
                           Past and present workshops and events, blog posts,
                           walkthrough documentation and working group milestones)
@@ -501,7 +507,9 @@
 <!--UI comment #9b - Accessibility - adding ALT tag with image description-->
                       <img id="logoImage" src="http://iiif.harvard.edu/wp-content/uploads/2016/02/International_Image_Interoperability_Framework_logo.png" alt="IIIF logo" title="" style="width: 1.75em;">
                   </span>
-                    <span class="font_IIIF">
+
+<!--UI comment #7e - removing class font_IIIF-->
+                    <span>
                         @Harvard
                     </span>
                 </a>
